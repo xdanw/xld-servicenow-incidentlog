@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<synthetic xmlns="http://www.xebialabs.com/deployit/synthetic">
+
+<type type="servicenow.Instance" extends="generic.Container" description="ServiceNow URL Target">
+    <property name="address" default="https://dev58646.service-now.com/" description="The address to your ServiceNow instance." />
+</type>
+
+<type type="servicenow.Ticket" extends="udm.BaseDeployed" deployable-type="servicenow.TicketInitiator" container-type="servicenow.Instance">
+    <generate-deployable type="servicenow.TicketInitiator" extends="udm.BaseDeployable"/>
+    <property name="ResultUri" required="false" description="The URL returned in the ticket creation process."/>
+    <property name="ResponseCode" required="false" description="The HTTP response code returned in the ticket creation process."/>
+</type>
+
+
+</synthetic>
