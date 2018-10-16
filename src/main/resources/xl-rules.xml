@@ -19,18 +19,6 @@
         </steps>
     </rule>
 
-    <rule name="ServiceNowCreateTicket" scope="pre-plan">
-        <conditions>
-        </conditions>
-        <steps>
-            <jython>
-                <order>60</order>
-                <description>Preplan: Open ServiceNow ticket</description>
-                <script>servicenow/OpenTicket.py</script>
-            </jython>
-        </steps>
-    </rule>
-
     <rule name="ServiceNowCloseTicket" scope="post-plan">
         <conditions>
         </conditions>
@@ -42,5 +30,21 @@
             </jython>
         </steps>
     </rule>
+
+    <!-- Method to create tickets without using a container, currently disabled -->
+
+    <!--
+        <rule name="ServiceNowCreateTicket" scope="pre-plan">
+            <conditions>
+            </conditions>
+            <steps>
+                <jython>
+                    <order>60</order>
+                    <description>Preplan: Open ServiceNow ticket</description>
+                    <script>servicenow/OpenTicket.py</script>
+                </jython>
+            </steps>
+        </rule>
+    -->
 
 </rules>

@@ -6,6 +6,10 @@ import requests.utils
 import os
 os.environ['REQUESTS_CA_BUNDLE'] = 'ca.pem';
 
+#  --- Debug Purposes Only, Server Config Is Hard Coded ---
+#
+#
+
 # print "Debug ... " + deployed.ResultUri;
 
 # response = requests.get('https://webhook.site/062e2ea7-5a36-4abb-a2c8-862dd85f777f')
@@ -59,5 +63,3 @@ context.setAttribute('ticket_sys_id', str(data['result']['sys_id']))
 print 'Storing attribute... sys_id: ' + context.getAttribute('ticket_sys_id');
 
 print "Ticket opened.";
-
-raise exception;
